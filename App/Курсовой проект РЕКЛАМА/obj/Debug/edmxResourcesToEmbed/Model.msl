@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище AdvertisingModelContainer" CdmEntityContainer="AdvertisingEntities">
+    <EntitySetMapping Name="Advertisements">
+      <EntityTypeMapping TypeName="AdvertisingModel.Advertisements">
+        <MappingFragment StoreEntitySet="Advertisements">
+          <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+          <ScalarProperty Name="FIO_Passport" ColumnName="FIO_Passport" />
+          <ScalarProperty Name="ad_name" ColumnName="ad_name" />
+          <ScalarProperty Name="broadcast" ColumnName="broadcast" />
+          <ScalarProperty Name="cl_id" ColumnName="cl_id" />
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="interval" ColumnName="interval" />
+          <ScalarProperty Name="ad_time" ColumnName="ad_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Air">
+      <EntityTypeMapping TypeName="AdvertisingModel.Air">
+        <MappingFragment StoreEntitySet="Air">
+          <ScalarProperty Name="broadcast" ColumnName="broadcast" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="end_time" ColumnName="end_time" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="AdvertisingModel.Clients">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="cl_id" ColumnName="cl_id" />
+          <ScalarProperty Name="cl_surname" ColumnName="cl_surname" />
+          <ScalarProperty Name="cl_name" ColumnName="cl_name" />
+          <ScalarProperty Name="cl_lastname" ColumnName="cl_lastname" />
+          <ScalarProperty Name="cl_passport" ColumnName="cl_passport" />
+          <ScalarProperty Name="cl_tel" ColumnName="cl_tel" />
+          <ScalarProperty Name="cl_bankcard" ColumnName="cl_bankcard" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="AdvertisingModel.Employees">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="post_id" ColumnName="post_id" />
+          <ScalarProperty Name="emp_surname" ColumnName="emp_surname" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="emp_lastname" ColumnName="emp_lastname" />
+          <ScalarProperty Name="emp_percent" ColumnName="emp_percent" />
+          <ScalarProperty Name="date_hire" ColumnName="date_hire" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="image_trip" ColumnName="image_trip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posts">
+      <EntityTypeMapping TypeName="AdvertisingModel.Posts">
+        <MappingFragment StoreEntitySet="Posts">
+          <ScalarProperty Name="post_id" ColumnName="post_id" />
+          <ScalarProperty Name="post_name" ColumnName="post_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_StatisticsFIO">
+      <EntityTypeMapping TypeName="AdvertisingModel.V_StatisticsFIO">
+        <MappingFragment StoreEntitySet="V_StatisticsFIO">
+          <ScalarProperty Name="ad_time" ColumnName="ad_time" />
+          <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+          <ScalarProperty Name="Income" ColumnName="Income" />
+          <ScalarProperty Name="ad_name" ColumnName="ad_name" />
+          <ScalarProperty Name="cl_passport" ColumnName="cl_passport" />
+          <ScalarProperty Name="cl_name" ColumnName="cl_name" />
+          <ScalarProperty Name="cl_surname" ColumnName="cl_surname" />
+          <ScalarProperty Name="FIO_Login" ColumnName="FIO_Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

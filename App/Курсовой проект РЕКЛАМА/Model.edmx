@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище AdvertisingModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище AdvertisingModelContainer">
+          <EntitySet Name="Advertisements" EntityType="Хранилище AdvertisingModel.Advertisements" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Air" EntityType="Хранилище AdvertisingModel.Air" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Clients" EntityType="Хранилище AdvertisingModel.Clients" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employees" EntityType="Хранилище AdvertisingModel.Employees" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Posts" EntityType="Хранилище AdvertisingModel.Posts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_StatisticsFIO" EntityType="Хранилище AdvertisingModel.V_StatisticsFIO" store:Type="Views" store:Schema="dbo" store:Name="V_StatisticsFIO">
+            <DefiningQuery>SELECT 
+      [V_StatisticsFIO].[FIO_Login] AS [FIO_Login], 
+      [V_StatisticsFIO].[cl_surname] AS [cl_surname], 
+      [V_StatisticsFIO].[cl_name] AS [cl_name], 
+      [V_StatisticsFIO].[cl_passport] AS [cl_passport], 
+      [V_StatisticsFIO].[ad_name] AS [ad_name], 
+      [V_StatisticsFIO].[ad_time] AS [ad_time], 
+      [V_StatisticsFIO].[Income] AS [Income], 
+      [V_StatisticsFIO].[ad_id] AS [ad_id]
+      FROM [dbo].[V_StatisticsFIO] AS [V_StatisticsFIO]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="broadcast" Association="Хранилище AdvertisingModel.broadcast">
+            <End Role="Air" EntitySet="Air" />
+            <End Role="Advertisements" EntitySet="Advertisements" />
+          </AssociationSet>
+          <AssociationSet Name="cl_id" Association="Хранилище AdvertisingModel.cl_id">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Advertisements" EntitySet="Advertisements" />
+          </AssociationSet>
+          <AssociationSet Name="emp_id" Association="Хранилище AdvertisingModel.emp_id">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Advertisements" EntitySet="Advertisements" />
+          </AssociationSet>
+          <AssociationSet Name="post_id" Association="Хранилище AdvertisingModel.post_id">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Advertisements">
+          <Key>
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Name="ad_id" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ad_name" Type="varchar" MaxLength="25" />
+          <Property Name="broadcast" Type="varchar" MaxLength="30" />
+          <Property Name="cl_id" Type="tinyint" />
+          <Property Name="emp_id" Type="tinyint" />
+          <Property Name="interval" Type="int" />
+          <Property Name="ad_time" Type="time" Precision="0" />
+          <Property Name="FIO_Passport" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Air">
+          <Key>
+            <PropertyRef Name="broadcast" />
+          </Key>
+          <Property Name="broadcast" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="start_time" Type="time" Nullable="false" Precision="0" />
+          <Property Name="end_time" Type="time" Nullable="false" Precision="0" />
+          <Property Name="price" Type="money" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="cl_id" />
+          </Key>
+          <Property Name="cl_id" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cl_surname" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="cl_name" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="cl_lastname" Type="varchar" MaxLength="20" />
+          <Property Name="cl_passport" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="cl_tel" Type="varchar" MaxLength="12" />
+          <Property Name="cl_bankcard" Type="varchar" MaxLength="19" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="emp_id" />
+          </Key>
+          <Property Name="emp_id" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="post_id" Type="tinyint" />
+          <Property Name="emp_surname" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="emp_name" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="emp_lastname" Type="varchar" MaxLength="20" />
+          <Property Name="emp_percent" Type="tinyint" />
+          <Property Name="date_hire" Type="date" Nullable="false" />
+          <Property Name="login" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="image_trip" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="post_id" />
+          </Key>
+          <Property Name="post_id" Type="tinyint" Nullable="false" />
+          <Property Name="post_name" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+      предупреждение 6002: В таблице или представлении "Advertising.dbo.V_StatisticsFIO" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.
+      -->
+        <EntityType Name="V_StatisticsFIO">
+          <Key>
+            <PropertyRef Name="cl_surname" />
+            <PropertyRef Name="cl_name" />
+            <PropertyRef Name="cl_passport" />
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Name="FIO_Login" Type="varchar" MaxLength="46" />
+          <Property Name="cl_surname" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="cl_name" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="cl_passport" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="ad_name" Type="varchar" MaxLength="25" />
+          <Property Name="ad_time" Type="time" Precision="0" />
+          <Property Name="Income" Type="money" />
+          <Property Name="ad_id" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <Association Name="broadcast">
+          <End Role="Air" Type="Хранилище AdvertisingModel.Air" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Advertisements" Type="Хранилище AdvertisingModel.Advertisements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Air">
+              <PropertyRef Name="broadcast" />
+            </Principal>
+            <Dependent Role="Advertisements">
+              <PropertyRef Name="broadcast" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="cl_id">
+          <End Role="Clients" Type="Хранилище AdvertisingModel.Clients" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Advertisements" Type="Хранилище AdvertisingModel.Advertisements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="cl_id" />
+            </Principal>
+            <Dependent Role="Advertisements">
+              <PropertyRef Name="cl_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="emp_id">
+          <End Role="Employees" Type="Хранилище AdvertisingModel.Employees" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Advertisements" Type="Хранилище AdvertisingModel.Advertisements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="emp_id" />
+            </Principal>
+            <Dependent Role="Advertisements">
+              <PropertyRef Name="emp_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="post_id">
+          <End Role="Posts" Type="Хранилище AdvertisingModel.Posts" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Employees" Type="Хранилище AdvertisingModel.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="post_id" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="post_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdvertisingModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AdvertisingEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Advertisements" EntityType="AdvertisingModel.Advertisements" />
+          <EntitySet Name="Air" EntityType="AdvertisingModel.Air" />
+          <EntitySet Name="Clients" EntityType="AdvertisingModel.Clients" />
+          <EntitySet Name="Employees" EntityType="AdvertisingModel.Employees" />
+          <EntitySet Name="Posts" EntityType="AdvertisingModel.Posts" />
+          <AssociationSet Name="broadcast" Association="AdvertisingModel.broadcast">
+            <End Role="Air" EntitySet="Air" />
+            <End Role="Advertisements" EntitySet="Advertisements" />
+          </AssociationSet>
+          <AssociationSet Name="cl_id" Association="AdvertisingModel.cl_id">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Advertisements" EntitySet="Advertisements" />
+          </AssociationSet>
+          <AssociationSet Name="emp_id" Association="AdvertisingModel.emp_id">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Advertisements" EntitySet="Advertisements" />
+          </AssociationSet>
+          <AssociationSet Name="post_id" Association="AdvertisingModel.post_id">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <EntitySet Name="V_StatisticsFIO" EntityType="AdvertisingModel.V_StatisticsFIO" />
+        </EntityContainer>
+        <EntityType Name="Advertisements">
+          <Key>
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Name="ad_name" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="broadcast" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="cl_id" Type="Byte" />
+          <Property Name="emp_id" Type="Byte" />
+          <Property Name="interval" Type="Int32" />
+          <Property Name="ad_time" Type="Time" Precision="0" />
+          <NavigationProperty Name="Air" Relationship="AdvertisingModel.broadcast" FromRole="Advertisements" ToRole="Air" />
+          <NavigationProperty Name="Clients" Relationship="AdvertisingModel.cl_id" FromRole="Advertisements" ToRole="Clients" />
+          <NavigationProperty Name="Employees" Relationship="AdvertisingModel.emp_id" FromRole="Advertisements" ToRole="Employees" />
+          <Property Type="String" Name="FIO_Passport" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="ad_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Air">
+          <Key>
+            <PropertyRef Name="broadcast" />
+          </Key>
+          <Property Name="broadcast" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="start_time" Type="Time" Nullable="false" Precision="0" />
+          <Property Name="end_time" Type="Time" Nullable="false" Precision="0" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Advertisements" Relationship="AdvertisingModel.broadcast" FromRole="Air" ToRole="Advertisements" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="cl_id" />
+          </Key>
+          <Property Name="cl_id" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="cl_surname" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="cl_name" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="cl_lastname" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="cl_passport" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="cl_tel" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="cl_bankcard" Type="String" MaxLength="19" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Advertisements" Relationship="AdvertisingModel.cl_id" FromRole="Clients" ToRole="Advertisements" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="emp_id" />
+          </Key>
+          <Property Name="emp_id" Type="Byte" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="post_id" Type="Byte" />
+          <Property Name="emp_surname" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="emp_name" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="emp_lastname" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="emp_percent" Type="Byte" />
+          <Property Name="date_hire" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="login" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="image_trip" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Advertisements" Relationship="AdvertisingModel.emp_id" FromRole="Employees" ToRole="Advertisements" />
+          <NavigationProperty Name="Posts" Relationship="AdvertisingModel.post_id" FromRole="Employees" ToRole="Posts" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="post_id" />
+          </Key>
+          <Property Name="post_id" Type="Byte" Nullable="false" />
+          <Property Name="post_name" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Employees" Relationship="AdvertisingModel.post_id" FromRole="Posts" ToRole="Employees" />
+        </EntityType>
+        <Association Name="broadcast">
+          <End Role="Air" Type="AdvertisingModel.Air" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Advertisements" Type="AdvertisingModel.Advertisements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Air">
+              <PropertyRef Name="broadcast" />
+            </Principal>
+            <Dependent Role="Advertisements">
+              <PropertyRef Name="broadcast" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="cl_id">
+          <End Role="Clients" Type="AdvertisingModel.Clients" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Advertisements" Type="AdvertisingModel.Advertisements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="cl_id" />
+            </Principal>
+            <Dependent Role="Advertisements">
+              <PropertyRef Name="cl_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="emp_id">
+          <End Role="Employees" Type="AdvertisingModel.Employees" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Advertisements" Type="AdvertisingModel.Advertisements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="emp_id" />
+            </Principal>
+            <Dependent Role="Advertisements">
+              <PropertyRef Name="emp_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="post_id">
+          <End Role="Posts" Type="AdvertisingModel.Posts" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Employees" Type="AdvertisingModel.Employees" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="post_id" />
+            </Principal>
+            <Dependent Role="Employees">
+              <PropertyRef Name="post_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="V_StatisticsFIO">
+          <Key>
+            <PropertyRef Name="cl_surname" />
+            <PropertyRef Name="cl_name" />
+            <PropertyRef Name="cl_passport" />
+            <PropertyRef Name="ad_id" />
+          </Key>
+          <Property Type="String" Name="FIO_Login" MaxLength="46" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cl_surname" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cl_name" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="cl_passport" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ad_name" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Income" Precision="19" Scale="4" />
+          <Property Type="Byte" Name="ad_id" Nullable="false" />
+          <Property Type="Time" Name="ad_time" Precision="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище AdvertisingModelContainer" CdmEntityContainer="AdvertisingEntities">
+          <EntitySetMapping Name="Advertisements">
+            <EntityTypeMapping TypeName="AdvertisingModel.Advertisements">
+              <MappingFragment StoreEntitySet="Advertisements">
+                <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+                <ScalarProperty Name="FIO_Passport" ColumnName="FIO_Passport" />
+                <ScalarProperty Name="ad_name" ColumnName="ad_name" />
+                <ScalarProperty Name="broadcast" ColumnName="broadcast" />
+                <ScalarProperty Name="cl_id" ColumnName="cl_id" />
+                <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+                <ScalarProperty Name="interval" ColumnName="interval" />
+                <ScalarProperty Name="ad_time" ColumnName="ad_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Air">
+            <EntityTypeMapping TypeName="AdvertisingModel.Air">
+              <MappingFragment StoreEntitySet="Air">
+                <ScalarProperty Name="broadcast" ColumnName="broadcast" />
+                <ScalarProperty Name="start_time" ColumnName="start_time" />
+                <ScalarProperty Name="end_time" ColumnName="end_time" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="AdvertisingModel.Clients">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="cl_id" ColumnName="cl_id" />
+                <ScalarProperty Name="cl_surname" ColumnName="cl_surname" />
+                <ScalarProperty Name="cl_name" ColumnName="cl_name" />
+                <ScalarProperty Name="cl_lastname" ColumnName="cl_lastname" />
+                <ScalarProperty Name="cl_passport" ColumnName="cl_passport" />
+                <ScalarProperty Name="cl_tel" ColumnName="cl_tel" />
+                <ScalarProperty Name="cl_bankcard" ColumnName="cl_bankcard" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="AdvertisingModel.Employees">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+                <ScalarProperty Name="post_id" ColumnName="post_id" />
+                <ScalarProperty Name="emp_surname" ColumnName="emp_surname" />
+                <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+                <ScalarProperty Name="emp_lastname" ColumnName="emp_lastname" />
+                <ScalarProperty Name="emp_percent" ColumnName="emp_percent" />
+                <ScalarProperty Name="date_hire" ColumnName="date_hire" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="image_trip" ColumnName="image_trip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posts">
+            <EntityTypeMapping TypeName="AdvertisingModel.Posts">
+              <MappingFragment StoreEntitySet="Posts">
+                <ScalarProperty Name="post_id" ColumnName="post_id" />
+                <ScalarProperty Name="post_name" ColumnName="post_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_StatisticsFIO">
+            <EntityTypeMapping TypeName="AdvertisingModel.V_StatisticsFIO">
+              <MappingFragment StoreEntitySet="V_StatisticsFIO">
+                <ScalarProperty Name="ad_time" ColumnName="ad_time" />
+                <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+                <ScalarProperty Name="Income" ColumnName="Income" />
+                <ScalarProperty Name="ad_name" ColumnName="ad_name" />
+                <ScalarProperty Name="cl_passport" ColumnName="cl_passport" />
+                <ScalarProperty Name="cl_name" ColumnName="cl_name" />
+                <ScalarProperty Name="cl_surname" ColumnName="cl_surname" />
+                <ScalarProperty Name="FIO_Login" ColumnName="FIO_Login" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

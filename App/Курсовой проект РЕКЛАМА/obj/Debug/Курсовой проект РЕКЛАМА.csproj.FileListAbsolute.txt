@@ -1,0 +1,58 @@
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.exe.config
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.exe
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.pdb
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\EntityFramework.dll
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\EntityFramework.xml
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\ru\EntityFramework.resources.dll
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Properties.Resources.resources
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.csproj.GenerateResource.Cache
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.exe
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.pdb
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Emp.resources
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Boss.resources
+c:\users\edem\documents\visual studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Sign_In.resources
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.csprojResolveAssemblyReference.cache
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.exe.config
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.exe
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.pdb
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.exe
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.pdb
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\EntityFramework.dll
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\EntityFramework.xml
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\ru\EntityFramework.resources.dll
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.csprojResolveAssemblyReference.cache
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Emp.resources
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Boss.resources
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Sign_In.resources
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Properties.Resources.resources
+F:\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.csproj.GenerateResource.Cache
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.exe.config
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.exe
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.pdb
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.exe
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.pdb
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\EntityFramework.dll
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\EntityFramework.xml
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Emp.resources
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Boss.resources
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Sign_In.resources
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Properties.Resources.resources
+C:\Users\EDEM\Documents\Visual Studio 2012\Projects\Курсач\Курсовой проект РЕКЛАМА\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.csproj.GenerateResource.Cache
+C:\Users\EDEM\Desktop\Курсовой проект\Приложение\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.exe.config
+C:\Users\EDEM\Desktop\Курсовой проект\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.exe
+C:\Users\EDEM\Desktop\Курсовой проект\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.pdb
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.exe.config
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.exe
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.pdb
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.exe
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\bin\Debug\Курсовой проект РЕКЛАМА.pdb
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\bin\Debug\EntityFramework.dll
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\bin\Debug\EntityFramework.xml
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Emp.resources
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Boss.resources
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Form_Sign_In.resources
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой_проект_РЕКЛАМА.Properties.Resources.resources
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.csproj.GenerateResource.Cache
+C:\Users\EDEM\Desktop\Курсовой проект Шукуров Э.Р. 4351-21\Приложение\Курсовой проект РЕКЛАМА\obj\Debug\Курсовой проект РЕКЛАМА.csprojResolveAssemblyReference.cache
